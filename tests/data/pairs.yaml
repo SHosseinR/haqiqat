@@ -1,0 +1,81 @@
+# Labeled pairs for `haqiqat eval-embeddings`. Each pair is two short reports (headline plus
+# a lead sentence) that describe the same event (same: true) or different events, often
+# deliberately similar ones (same: false). Written for evaluation, not real reports.
+# Grow this set with real, anonymized examples from the pipeline's own mistakes.
+pairs:
+  # --- English / Persian, same event
+  - langs: en-fa
+    same: true
+    a: "Drone attack hits military site in Isfahan. Iranian officials said several small drones were intercepted over the city overnight."
+    b: "حمله پهپادی به یک مرکز نظامی در اصفهان. مقام‌های ایران می‌گویند چند پهپاد کوچک شب گذشته بر فراز شهر رهگیری شدند."
+  - langs: en-fa
+    same: true
+    a: "Iran and US resume indirect nuclear talks in Oman. Delegations met through Omani mediators in Muscat on Saturday."
+    b: "دور تازه مذاکرات غیرمستقیم هسته‌ای ایران و آمریکا در عمان. هیئت‌ها روز شنبه با میانجی‌گری عمان در مسقط دیدار کردند."
+  - langs: en-fa
+    same: true
+    a: "Rial falls to record low against the dollar. The Iranian currency traded above one million rials per dollar on the open market."
+    b: "سقوط ریال به پایین‌ترین سطح تاریخ در برابر دلار. هر دلار آمریکا در بازار آزاد بیش از یک میلیون ریال معامله شد."
+  - langs: en-fa
+    same: true
+    a: "Magnitude 5.6 earthquake strikes near Khoy in northwest Iran. Local officials reported injuries and damaged buildings."
+    b: "زلزله ۵.۶ ریشتری حوالی خوی در شمال غرب ایران. مقام‌های محلی از مصدومان و آسیب به ساختمان‌ها خبر دادند."
+  - langs: en-fa
+    same: true
+    a: "Journalist arrested in Tehran after reporting on protests. Her newspaper said security agents detained her at home."
+    b: "بازداشت یک روزنامه‌نگار در تهران پس از گزارش دربارهٔ اعتراضات. روزنامه‌اش گفت مأموران امنیتی او را در خانه بازداشت کردند."
+  - langs: en-fa
+    same: true
+    a: "Internet access restricted across Iran as officials cite security concerns. Monitoring groups reported national connectivity dropping sharply."
+    b: "محدودیت دسترسی به اینترنت در سراسر ایران به دلایل امنیتی. نهادهای پایش از افت شدید اتصال در سطح کشور خبر دادند."
+  # --- English / Persian, different events that share words
+  - langs: en-fa
+    same: false
+    a: "Drone attack hits military site in Isfahan. Iranian officials said several small drones were intercepted over the city overnight."
+    b: "زلزله ۵.۶ ریشتری حوالی خوی در شمال غرب ایران. مقام‌های محلی از مصدومان و آسیب به ساختمان‌ها خبر دادند."
+  - langs: en-fa
+    same: false
+    a: "Iran and US resume indirect nuclear talks in Oman. Delegations met through Omani mediators in Muscat on Saturday."
+    b: "دیدار وزیران خارجه ایران و عربستان در ریاض. دو طرف دربارهٔ گسترش روابط تجاری گفت‌وگو کردند."
+  - langs: en-fa
+    same: false
+    a: "Rial falls to record low against the dollar. The Iranian currency traded above one million rials per dollar on the open market."
+    b: "افزایش قیمت بنزین در ایران از ابتدای ماه آینده. دولت نرخ تازهٔ سهمیه‌ای را اعلام کرد."
+  - langs: en-fa
+    same: false
+    a: "Journalist arrested in Tehran after reporting on protests. Her newspaper said security agents detained her at home."
+    b: "آزادی یک فعال کارگری در اهواز پس از دو ماه بازداشت. خانواده‌اش از آزادی او با قرار وثیقه خبر دادند."
+  # --- English / English
+  - langs: en-en
+    same: true
+    a: "Israeli strikes kill 12 in southern Lebanon. Lebanon's health ministry said the dead included civilians."
+    b: "At least a dozen killed in Israeli air raids on south Lebanon, Beirut says. Health officials said women and children were among the dead."
+  - langs: en-en
+    same: false
+    a: "Israeli strikes kill 12 in southern Lebanon. Lebanon's health ministry said the dead included civilians."
+    b: "Israeli strikes hit Houthi-held port in Yemen. The Houthi-run health ministry said three people were killed in Hodeidah."
+  - langs: en-en
+    same: true
+    a: "Turkey's central bank raises interest rate to 50 percent. The bank cited persistent inflation pressures."
+    b: "Turkish central bank hikes key rate to 50% to fight inflation. Policymakers said further tightening was possible."
+  - langs: en-en
+    same: false
+    a: "Turkey's central bank raises interest rate to 50 percent. The bank cited persistent inflation pressures."
+    b: "Egypt's central bank holds interest rates steady. Inflation eased for a third straight month, the bank said."
+  # --- Persian / Persian
+  - langs: fa-fa
+    same: true
+    a: "اعدام یک زندانی در زندان قزلحصار. یک نهاد حقوق بشری گفت حکم صبح امروز اجرا شد."
+    b: "گزارش اجرای حکم اعدام یک زندانی در قزلحصار کرج. به گفتهٔ فعالان حقوق بشر اعدام بامداد امروز انجام شد."
+  - langs: fa-fa
+    same: false
+    a: "اعدام یک زندانی در زندان قزلحصار. یک نهاد حقوق بشری گفت حکم صبح امروز اجرا شد."
+    b: "آزادی یک زندانی سیاسی از زندان اوین. خانواده‌اش گفتند او پس از پایان محکومیت آزاد شد."
+  - langs: fa-fa
+    same: true
+    a: "سیل در استان سیستان و بلوچستان چند روستا را فراگرفت. هلال احمر از امدادرسانی به مناطق آسیب‌دیده خبر داد."
+    b: "جاری شدن سیل در سیستان و بلوچستان؛ روستاها زیر آب رفتند. نیروهای امدادی هلال احمر به منطقه اعزام شدند."
+  - langs: fa-fa
+    same: false
+    a: "سیل در استان سیستان و بلوچستان چند روستا را فراگرفت. هلال احمر از امدادرسانی به مناطق آسیب‌دیده خبر داد."
+    b: "خشکسالی در خوزستان کشاورزان را به اعتراض واداشت. کشاورزان در برابر استانداری تجمع کردند."
