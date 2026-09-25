@@ -1,0 +1,28 @@
+id: tolonews
+name:
+  en: TOLOnews
+  fa: طلوع‌نیوز
+homepage: https://tolonews.com
+languages:
+- en
+- fa
+country: AF
+type: broadcaster
+ownership:
+  kind: private
+  owner: Moby Group
+  evidence:
+  - url: https://en.wikipedia.org/wiki/TOLOnews
+    note: Wikipedia article
+independence_group: moby-group
+lenses:
+  origin: south_asia
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://tolonews.com/rss.xml
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'

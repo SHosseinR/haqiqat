@@ -1,0 +1,14 @@
+# Regions readers can choose. A region with no countries means "everything".
+# Add a region by listing its ISO 3166 country codes; no code changes needed.
+order: [world, west-asia, iran]
+regions:
+  world:
+    name: {en: World, fa: جهان}
+    countries: []
+  west-asia:
+    name: {en: West Asia & Middle East, fa: غرب آسیا و خاورمیانه}
+    countries: [IR, IQ, SY, LB, IL, PS, JO, SA, AE, QA, BH, KW, OM, YE, TR, CY, EG, AF, PK,
+                AZ, AM, GE]
+  iran:
+    name: {en: Iran, fa: ایران}
+    countries: [IR]

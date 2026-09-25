@@ -1,0 +1,28 @@
+id: fox-news
+name:
+  en: Fox News
+  fa: فاکس نیوز
+homepage: https://www.foxnews.com
+languages:
+- en
+country: US
+type: broadcaster
+ownership:
+  kind: private
+  owner: Fox Corporation
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Fox_News
+    note: Wikipedia article
+independence_group: fox
+lenses:
+  origin: western
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- world
+- west-asia
+feeds:
+- url: https://moxie.foxnews.com/google-publisher/world.xml
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'

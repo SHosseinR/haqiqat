@@ -1,0 +1,86 @@
+# Lenses: where an outlet stands, on axes that make sense for the region, instead of a
+# single US-style left/right line. Each position belongs to a camp; corroboration across
+# camps is what "confirmed across sides" means (docs/methodology.md).
+#
+# - An axis with `primary_for_countries` is the primary lens for stories involving those
+#   countries. Outlets without a position on it fall back to the `origin` axis.
+# - Every source must have an `origin` position.
+# - Changing a position or camp is a public, evidence-backed pull request
+#   (docs/source-rating.md).
+
+fallback_axis: origin
+
+axes:
+  iran:
+    name: {en: "Relation to Iran's political system", fa: "نسبت با ساختار سیاسی ایران"}
+    description:
+      en: >-
+        For stories about Iran. Distinguishes outlets operating inside the Islamic Republic's
+        licensing and censorship system (whatever their faction) from Persian-language media
+        outside it and from human-rights monitors.
+      fa: >-
+        برای خبرهای مربوط به ایران. رسانه‌هایی را که درون نظام مجوز و نظارت جمهوری اسلامی کار
+        می‌کنند (از هر جناح) از رسانه‌های فارسی‌زبان بیرون از آن و از نهادهای حقوق بشری جدا می‌کند.
+    primary_for_countries: [IR]
+    camps:
+      inside: {en: "Inside Iran's system", fa: "درون ساختار رسمی ایران"}
+      outside: {en: "Persian media abroad", fa: "رسانه‌های فارسی خارج از کشور"}
+      monitor: {en: "Rights monitors", fa: "نهادهای حقوق بشری"}
+    positions:
+      ir_state:
+        name: {en: "Iranian state / official", fa: "رسمی و حکومتی"}
+        camp: inside
+      ir_principlist:
+        name: {en: "Principlist (conservative)", fa: "اصولگرا"}
+        camp: inside
+      ir_reformist:
+        name: {en: "Reformist / moderate", fa: "اصلاح‌طلب و میانه‌رو"}
+        camp: inside
+      ir_nonfactional:
+        name: {en: "Non-factional domestic (e.g. economic press)", fa: "غیرجناحی داخلی"}
+        camp: inside
+      foreign_state_persian:
+        name: {en: "Foreign state-funded Persian service", fa: "بخش فارسی رسانهٔ دولتی/عمومی خارجی"}
+        camp: outside
+      diaspora_media:
+        name: {en: "Privately owned Persian media abroad", fa: "رسانهٔ خصوصی فارسی‌زبان خارج از کشور"}
+        camp: outside
+      rights_monitor:
+        name: {en: "Human-rights monitor", fa: "نهاد حقوق بشری"}
+        camp: monitor
+
+  origin:
+    name: {en: "Origin and funding bloc", fa: "خاستگاه و بلوک تأمین مالی"}
+    description:
+      en: Where an outlet is based and, for state media, which state funds it.
+      fa: محل استقرار رسانه و، برای رسانه‌های دولتی، دولتی که آن را تأمین مالی می‌کند.
+    camps:
+      iran: {en: Iran-based, fa: مستقر در ایران}
+      persian_diaspora: {en: Persian diaspora, fa: فارسی‌زبانان خارج از کشور}
+      western: {en: Western, fa: غربی}
+      israel: {en: Israeli, fa: اسرائیلی}
+      saudi_uae: {en: Saudi / UAE, fa: عربستان و امارات}
+      qatar: {en: Qatari, fa: قطری}
+      turkey: {en: Turkish, fa: ترکیه‌ای}
+      arab_other: {en: Other Arab, fa: دیگر کشورهای عربی}
+      kurdish: {en: Kurdish, fa: کردی}
+      russia: {en: Russian, fa: روسی}
+      china: {en: Chinese, fa: چینی}
+      south_asia: {en: South Asian, fa: جنوب آسیا}
+      intl_org: {en: International organizations, fa: سازمان‌های بین‌المللی}
+      monitor: {en: Rights monitors, fa: نهادهای حقوق بشری}
+    positions:
+      iran: {name: {en: Iran-based, fa: مستقر در ایران}, camp: iran}
+      persian_diaspora: {name: {en: Persian diaspora, fa: فارسی‌زبانان خارج از کشور}, camp: persian_diaspora}
+      western: {name: {en: Western, fa: غربی}, camp: western}
+      israel: {name: {en: Israeli, fa: اسرائیلی}, camp: israel}
+      saudi_uae: {name: {en: Saudi / UAE, fa: عربستان و امارات}, camp: saudi_uae}
+      qatar: {name: {en: Qatari, fa: قطری}, camp: qatar}
+      turkey: {name: {en: Turkish, fa: ترکیه‌ای}, camp: turkey}
+      arab_other: {name: {en: Other Arab, fa: دیگر کشورهای عربی}, camp: arab_other}
+      kurdish: {name: {en: Kurdish, fa: کردی}, camp: kurdish}
+      russia: {name: {en: Russian, fa: روسی}, camp: russia}
+      china: {name: {en: Chinese, fa: چینی}, camp: china}
+      south_asia: {name: {en: South Asian, fa: جنوب آسیا}, camp: south_asia}
+      intl_org: {name: {en: International organization, fa: سازمان بین‌المللی}, camp: intl_org}
+      monitor: {name: {en: Rights monitor, fa: نهاد حقوق بشری}, camp: monitor}

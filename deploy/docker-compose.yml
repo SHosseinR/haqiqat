@@ -1,0 +1,24 @@
+services:
+  pipeline:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    env_file: .env                  # OPENAI_API_KEY, ANTHROPIC_API_KEY, TELEGRAM_BOT_TOKEN
+    volumes:
+      - ../config/config.yaml:/app/config/config.yaml:ro
+      - data:/app/data
+      - site:/app/build/site
+    restart: unless-stopped
+
+  web:
+    image: caddy:2
+    command: caddy file-server --root /srv --listen :8080
+    volumes:
+      - site:/srv:ro
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+
+volumes:
+  data:
+  site:

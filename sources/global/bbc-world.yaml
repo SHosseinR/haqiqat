@@ -1,0 +1,33 @@
+id: bbc-world
+name:
+  en: BBC News
+  fa: بی‌بی‌سی
+homepage: https://www.bbc.com/news
+languages:
+- en
+country: GB
+type: broadcaster
+ownership:
+  kind: public
+  state: GB
+  owner: BBC
+  evidence:
+  - url: https://en.wikipedia.org/wiki/BBC_News
+    note: Wikipedia article
+independence_group: bbc
+lenses:
+  origin: western
+reliability:
+  wikipedia_en: generally_reliable
+  wikipedia_fa: unreviewed
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources
+    note: English Wikipedia perennial sources list; re-check periodically
+focus_regions:
+- world
+- west-asia
+feeds:
+- url: https://feeds.bbci.co.uk/news/world/rss.xml
+  verified: false
+- url: https://feeds.bbci.co.uk/news/world/middle_east/rss.xml
+  verified: false

@@ -1,0 +1,27 @@
+id: middle-east-eye
+name:
+  en: Middle East Eye
+  fa: میدل ایست آی
+homepage: https://www.middleeasteye.net
+languages:
+- en
+country: GB
+type: online
+ownership:
+  kind: private
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Middle_East_Eye
+    note: Wikipedia article
+independence_group: mee
+lenses:
+  origin: western
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://www.middleeasteye.net/rss
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'
+notes: Funding has been reported to have Qatari links; the outlet denies this.

@@ -1,0 +1,35 @@
+{% macro sources_line(ids, s, lang) -%}
+{% for aid in ids %}{% set a = s.article(aid) %}{% if a %}<a class="src" href="{{ a.url }}" rel="noopener nofollow" hreflang="{{ a.lang }}">{{ a.source_name[lang] or a.source_name.en }}</a>{% endif %}{% endfor %}
+{%- endmacro %}
+
+{% macro camp_bar(s, lang) -%}
+<ul class="camps">
+  {% for camp, n in s.camps.most_common() %}
+  <li><span class="camp">{{ camp_name(camp, lang) }}</span> <span class="n">{{ num(lang, n) }}</span></li>
+  {% endfor %}
+</ul>
+{%- endmacro %}
+
+{% macro label_counts(s, lang) -%}
+{% set ns = namespace(c={}) %}
+{% for f in s.facts %}{% set _ = ns.c.update({f.label: ns.c.get(f.label, 0) + 1}) %}{% endfor %}
+{% for label, n in ns.c.items() %}<span class="badge {{ label }}">{{ num(lang, n) }} · {{ LABEL_NAMES[label][lang] }}</span>{% endfor %}
+{%- endmacro %}
+
+{% macro card(s, lang, root) -%}
+<article class="card">
+  <h2 dir="auto"><a href="{{ root }}{{ lang }}/story/{{ s.id }}/">{{ s.title[lang] }}</a></h2>
+  {% if s.kind == 'llm' %}
+  <p class="summary" dir="auto">{{ s.summary[lang] }}</p>
+  {% elif s.title_source[lang] %}
+  <p class="summary muted">— {{ s.title_source[lang] }}</p>
+  {% endif %}
+  <p class="meta">
+    <span>{{ t(lang, 'independent_sources', n=s.n_groups) }}</span>
+    <span>{{ fmt_time(s.last_article_at, lang) }}</span>
+    {% for c in s.countries[:3] %}<span class="tag">{{ country_name(c, lang) }}</span>{% endfor %}
+    {% if s.category %}<span class="tag">{{ topic_name(s.category, lang) }}</span>{% endif %}
+  </p>
+  <p class="labels">{{ label_counts(s, lang) }}{% if s.blindspot %}<span class="badge blindspot">{{ t(lang, 'blindspot', camp=camp_name(s.blindspot, lang)) }}</span>{% endif %}</p>
+</article>
+{%- endmacro %}

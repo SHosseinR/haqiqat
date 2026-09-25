@@ -1,0 +1,28 @@
+id: isna
+name:
+  en: ISNA
+  fa: ایسنا
+homepage: https://www.isna.ir
+languages:
+- fa
+country: IR
+type: news_agency
+ownership:
+  kind: state
+  state: IR
+  owner: Academic Center for Education, Culture and Research (ACECR)
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Iranian_Students_News_Agency
+    note: Wikipedia article
+independence_group: ir-acecr
+lenses:
+  origin: iran
+  iran: ir_state
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://www.isna.ir/rss
+  verified: false

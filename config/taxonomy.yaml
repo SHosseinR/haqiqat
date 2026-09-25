@@ -1,0 +1,56 @@
+# Top level of IPTC Media Topics (https://iptc.org/standards/media-topics/, CC BY 4.0),
+# the news industry's standard hierarchical taxonomy. Descriptions are used for zero-shot
+# classification by embedding similarity; deeper levels can be added later.
+source: IPTC Media Topics (CC BY 4.0)
+topics:
+  - id: medtop:01000000
+    name: {en: "Arts, culture & media", fa: "هنر، فرهنگ و رسانه"}
+    description: "arts, culture, entertainment, cinema, music, literature, books, media, journalism, censorship of the press"
+  - id: medtop:02000000
+    name: {en: "Crime, law & justice", fa: "جرم، قانون و دادگستری"}
+    description: "crime, courts, trials, sentences, executions, arrests, police, prisons, lawsuits, judiciary"
+  - id: medtop:03000000
+    name: {en: "Disasters & accidents", fa: "حوادث و بلایا"}
+    description: "earthquake, flood, fire, explosion, accident, crash, disaster, emergency, rescue, casualties"
+  - id: medtop:04000000
+    name: {en: "Economy & business", fa: "اقتصاد و کسب‌وکار"}
+    description: "economy, inflation, currency, rial, dollar, oil, prices, markets, trade, companies, budget, sanctions on trade, energy"
+  - id: medtop:05000000
+    name: {en: "Education", fa: "آموزش"}
+    description: "schools, universities, students, teachers, exams, education policy"
+  - id: medtop:06000000
+    name: {en: "Environment", fa: "محیط زیست"}
+    description: "environment, pollution, climate, water shortage, drought, dust storms, wildlife, dams"
+  - id: medtop:07000000
+    name: {en: "Health", fa: "سلامت"}
+    description: "health, disease, hospitals, medicine, epidemic, vaccines, doctors, public health"
+  - id: medtop:08000000
+    name: {en: "Human interest", fa: "انسانی و اجتماعی"}
+    description: "human interest stories, people, celebrities, anniversaries, awards"
+  - id: medtop:09000000
+    name: {en: "Labour", fa: "کار و کارگران"}
+    description: "workers, strikes, wages, unemployment, pensions, retirees protests, labour unions"
+  - id: medtop:10000000
+    name: {en: "Lifestyle & leisure", fa: "سبک زندگی"}
+    description: "lifestyle, leisure, travel, tourism, food, fashion, hobbies"
+  - id: medtop:11000000
+    name: {en: "Politics & government", fa: "سیاست و حکومت"}
+    description: "politics, government, elections, parliament, diplomacy, foreign policy, negotiations, nuclear talks, sanctions, protests, human rights, officials"
+  - id: medtop:12000000
+    name: {en: "Religion", fa: "دین"}
+    description: "religion, clergy, religious minorities, mosques, churches, religious festivals, hijab rules"
+  - id: medtop:13000000
+    name: {en: "Science & technology", fa: "علم و فناوری"}
+    description: "science, technology, internet, internet shutdown, filtering, space, research, artificial intelligence, cyberattack"
+  - id: medtop:14000000
+    name: {en: "Society", fa: "جامعه"}
+    description: "society, social issues, women's rights, migration, refugees, poverty, family, demographics, minorities"
+  - id: medtop:15000000
+    name: {en: "Sport", fa: "ورزش"}
+    description: "sport, football, wrestling, olympics, matches, athletes, teams, championships"
+  - id: medtop:16000000
+    name: {en: "Conflict, war & peace", fa: "جنگ، درگیری و صلح"}
+    description: "war, military, airstrike, missile, drone attack, armed conflict, ceasefire, terrorism, security forces, peace talks, casualties of war"
+  - id: medtop:17000000
+    name: {en: "Weather", fa: "آب‌وهوا"}
+    description: "weather, forecast, heatwave, storm, snow, temperature"

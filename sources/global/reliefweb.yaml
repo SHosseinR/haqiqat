@@ -1,0 +1,28 @@
+id: reliefweb
+name:
+  en: ReliefWeb
+  fa: ریلیف‌وب
+homepage: https://reliefweb.int
+languages:
+- en
+country: US
+type: intergovernmental
+ownership:
+  kind: public
+  owner: UN OCHA
+  evidence:
+  - url: https://en.wikipedia.org/wiki/ReliefWeb
+    note: Wikipedia article
+independence_group: un
+lenses:
+  origin: intl_org
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- world
+- west-asia
+feeds:
+- url: https://reliefweb.int/updates/rss.xml
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'

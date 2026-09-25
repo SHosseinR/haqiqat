@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% from "_macros.html" import card %}
+{% block title %}{% if region_id %}{{ regions.regions[region_id].name[lang] }} · {% endif %}{{ cfg.site.title[lang] }}{% endblock %}
+{% block other_lang_href %}{{ root }}{{ other }}/{% if region_id %}region/{{ region_id }}/{% endif %}{% endblock %}
+{% block content %}
+<h1 class="page">{% if region_id %}{{ regions.regions[region_id].name[lang] }}{% else %}{{ t(lang, 'top_stories') }}{% endif %}</h1>
+{% for s in stories %}
+{{ card(s, lang, root) }}
+{% else %}
+<p class="muted">{{ t(lang, 'empty') }}</p>
+{% endfor %}
+{% endblock %}

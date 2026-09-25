@@ -1,0 +1,32 @@
+id: irna
+name:
+  en: IRNA
+  fa: ایرنا
+homepage: https://www.irna.ir
+languages:
+- fa
+- en
+country: IR
+type: news_agency
+ownership:
+  kind: state
+  state: IR
+  owner: Government of Iran
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Islamic_Republic_News_Agency
+    note: Wikipedia article
+independence_group: ir-government
+lenses:
+  origin: iran
+  iran: ir_state
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://www.irna.ir/rss
+  verified: false
+- url: https://en.irna.ir/rss
+  verified: false
+  language: en

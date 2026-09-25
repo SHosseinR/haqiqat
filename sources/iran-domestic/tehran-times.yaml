@@ -1,0 +1,28 @@
+id: tehran-times
+name:
+  en: Tehran Times
+  fa: تهران تایمز
+homepage: https://www.tehrantimes.com
+languages:
+- en
+country: IR
+type: newspaper
+ownership:
+  kind: state
+  state: IR
+  owner: Islamic Propagation (Development) Organization
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Tehran_Times
+    note: Wikipedia article
+independence_group: ir-ipo
+lenses:
+  origin: iran
+  iran: ir_state
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://www.tehrantimes.com/rss
+  verified: false

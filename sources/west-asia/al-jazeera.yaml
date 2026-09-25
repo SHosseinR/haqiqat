@@ -1,0 +1,30 @@
+id: al-jazeera
+name:
+  en: Al Jazeera English
+  fa: الجزیره انگلیسی
+homepage: https://www.aljazeera.com
+languages:
+- en
+country: QA
+type: broadcaster
+ownership:
+  kind: state
+  state: QA
+  owner: Al Jazeera Media Network (funded by the government of Qatar)
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Al_Jazeera_English
+    note: Wikipedia article
+independence_group: aljazeera
+lenses:
+  origin: qatar
+reliability:
+  wikipedia_en: generally_reliable
+  wikipedia_fa: unreviewed
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources
+    note: English Wikipedia perennial sources list; re-check periodically
+focus_regions:
+- west-asia
+feeds:
+- url: https://www.aljazeera.com/xml/rss/all.xml
+  verified: false

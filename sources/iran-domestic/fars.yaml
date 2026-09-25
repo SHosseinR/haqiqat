@@ -1,0 +1,29 @@
+id: fars
+name:
+  en: Fars News
+  fa: فارس
+homepage: https://www.farsnews.ir
+languages:
+- fa
+country: IR
+type: news_agency
+ownership:
+  kind: state
+  state: IR
+  owner: Reported affiliation with the IRGC
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Fars_News_Agency
+    note: Wikipedia article
+independence_group: ir-irgc-affiliated
+lenses:
+  origin: iran
+  iran: ir_state
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://www.farsnews.ir/rss
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'

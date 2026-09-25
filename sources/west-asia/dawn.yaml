@@ -1,0 +1,25 @@
+id: dawn
+name:
+  en: Dawn
+  fa: داون
+homepage: https://www.dawn.com
+languages:
+- en
+country: PK
+type: newspaper
+ownership:
+  kind: private
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Dawn_(newspaper)
+    note: Wikipedia article
+independence_group: dawn
+lenses:
+  origin: south_asia
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://www.dawn.com/feeds/home
+  verified: false

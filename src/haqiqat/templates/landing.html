@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ cfg.site.title.fa }} · {{ cfg.site.title.en }}</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="landing">
+<main class="wrap">
+  <h1>{{ cfg.site.title.fa }} <span lang="en" dir="ltr">· {{ cfg.site.title.en }}</span></h1>
+  <p>{{ t('fa', 'tagline') }}</p>
+  <p lang="en" dir="ltr">{{ t('en', 'tagline') }}</p>
+  <nav class="choose">
+    {% for l in langs %}<a href="{{ l }}/" lang="{{ l }}" data-lang="{{ l }}">{{ 'فارسی' if l == 'fa' else 'English' }}</a>{% endfor %}
+  </nav>
+</main>
+<script src="assets/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+id: radio-zamaneh
+name:
+  en: Radio Zamaneh
+  fa: رادیو زمانه
+homepage: https://www.radiozamaneh.com
+languages:
+- fa
+country: NL
+type: online
+ownership:
+  kind: nonprofit
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Radio_Zamaneh
+    note: Wikipedia article
+independence_group: zamaneh
+lenses:
+  origin: persian_diaspora
+  iran: diaspora_media
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://www.radiozamaneh.com/feed/
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'

@@ -1,0 +1,31 @@
+# Wording our own text avoids (docs/style-guide.md). Summaries containing these terms are
+# still published but flagged in `style_flags`, so reviewers can check them and improve
+# the prompt. Quotes attributed to sources are allowed to contain anything.
+avoid:
+  en:
+    - {term: regime, use: "government / the Islamic Republic / the [country] government"}
+    - {term: martyred, use: killed}
+    - {term: martyr, use: "person killed"}
+    - {term: brutal, use: "(describe what happened)"}
+    - {term: heroic, use: "(describe what happened)"}
+    - {term: slammed, use: criticized}
+    - {term: blasted, use: criticized}
+    - {term: so-called, use: "(name it, attribute any label)"}
+    - {term: terrorists, use: "attribute the label: 'which X designates as terrorist'"}
+    - {term: zionist entity, use: Israel}
+    - {term: mullahs, use: "clerics / officials"}
+    - {term: thugs, use: "(name the group)"}
+    - {term: rioters, use: "protesters (attribute if a party calls them rioters)"}
+  fa:
+    - {term: رژیم, use: "حکومت / دولت / جمهوری اسلامی"}
+    - {term: رژیم صهیونیستی, use: اسرائیل}
+    - {term: شهید, use: "کشته"}
+    - {term: به شهادت رسید, use: "کشته شد"}
+    - {term: اغتشاشگران, use: "معترضان (با نقل قول از طرفی که این عنوان را به کار می‌برد)"}
+    - {term: آشوبگران, use: "معترضان (با نقل قول)"}
+    - {term: تروریست‌ها, use: "با انتساب: «که ... آن را تروریستی می‌داند»"}
+    - {term: مزدوران, use: "(نام گروه)"}
+    - {term: وحشیانه, use: "(شرح آنچه رخ داد)"}
+    - {term: قهرمانانه, use: "(شرح آنچه رخ داد)"}
+    - {term: آخوندها, use: "روحانیان / مقام‌ها"}
+    - {term: فتنه, use: "اعتراضات (با نقل قول)"}

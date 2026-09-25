@@ -1,0 +1,26 @@
+id: kurdistan24
+name:
+  en: Kurdistan24
+  fa: کوردستان۲۴
+homepage: https://www.kurdistan24.net
+languages:
+- en
+country: IQ
+type: broadcaster
+ownership:
+  kind: private
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Kurdistan24
+    note: Wikipedia article
+independence_group: kdp-affiliated
+lenses:
+  origin: kurdish
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://www.kurdistan24.net/en/rss
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'

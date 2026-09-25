@@ -1,0 +1,27 @@
+id: the-national
+name:
+  en: The National
+  fa: نشنال
+homepage: https://www.thenationalnews.com
+languages:
+- en
+country: AE
+type: newspaper
+ownership:
+  kind: private
+  owner: International Media Investments (Abu Dhabi)
+  evidence:
+  - url: https://en.wikipedia.org/wiki/The_National_(Abu_Dhabi)
+    note: Wikipedia article
+independence_group: imi-uae
+lenses:
+  origin: saudi_uae
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://www.thenationalnews.com/arc/outboundfeeds/rss/?outputType=xml
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'

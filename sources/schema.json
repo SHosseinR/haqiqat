@@ -1,0 +1,332 @@
+{
+  "$defs": {
+    "Evidence": {
+      "properties": {
+        "url": {
+          "title": "Url",
+          "type": "string"
+        },
+        "note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note"
+        }
+      },
+      "required": [
+        "url"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "Feed": {
+      "properties": {
+        "url": {
+          "title": "Url",
+          "type": "string"
+        },
+        "kind": {
+          "default": "rss",
+          "enum": [
+            "rss",
+            "sitemap"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "language": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Language"
+        },
+        "enabled": {
+          "default": true,
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "verified": {
+          "default": false,
+          "title": "Verified",
+          "type": "boolean"
+        },
+        "note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note"
+        }
+      },
+      "required": [
+        "url"
+      ],
+      "title": "Feed",
+      "type": "object"
+    },
+    "Localized": {
+      "properties": {
+        "en": {
+          "title": "En",
+          "type": "string"
+        },
+        "fa": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Fa"
+        }
+      },
+      "required": [
+        "en"
+      ],
+      "title": "Localized",
+      "type": "object"
+    },
+    "Ownership": {
+      "properties": {
+        "kind": {
+          "enum": [
+            "state",
+            "public",
+            "private",
+            "nonprofit",
+            "party",
+            "unknown"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "state": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "State"
+        },
+        "owner": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Owner"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "title": "Evidence",
+          "type": "array"
+        }
+      },
+      "required": [
+        "kind"
+      ],
+      "title": "Ownership",
+      "type": "object"
+    },
+    "Reliability": {
+      "properties": {
+        "wikipedia_en": {
+          "default": "unreviewed",
+          "enum": [
+            "unreviewed",
+            "generally_reliable",
+            "no_consensus",
+            "generally_unreliable",
+            "deprecated",
+            "not_listed"
+          ],
+          "title": "Wikipedia En",
+          "type": "string"
+        },
+        "wikipedia_fa": {
+          "default": "unreviewed",
+          "enum": [
+            "unreviewed",
+            "generally_reliable",
+            "no_consensus",
+            "generally_unreliable",
+            "deprecated",
+            "not_listed"
+          ],
+          "title": "Wikipedia Fa",
+          "type": "string"
+        },
+        "state_media_monitor": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "State Media Monitor"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "title": "Evidence",
+          "type": "array"
+        }
+      },
+      "title": "Reliability",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "name": {
+      "$ref": "#/$defs/Localized"
+    },
+    "homepage": {
+      "title": "Homepage",
+      "type": "string"
+    },
+    "languages": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Languages",
+      "type": "array"
+    },
+    "country": {
+      "title": "Country",
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "news_agency",
+        "newspaper",
+        "broadcaster",
+        "online",
+        "wire",
+        "monitor",
+        "government",
+        "intergovernmental"
+      ],
+      "title": "Type",
+      "type": "string"
+    },
+    "ownership": {
+      "$ref": "#/$defs/Ownership"
+    },
+    "independence_group": {
+      "title": "Independence Group",
+      "type": "string"
+    },
+    "lenses": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Lenses",
+      "type": "object"
+    },
+    "reliability": {
+      "$ref": "#/$defs/Reliability",
+      "default": {
+        "wikipedia_en": "unreviewed",
+        "wikipedia_fa": "unreviewed",
+        "state_media_monitor": null,
+        "notes": null,
+        "evidence": []
+      }
+    },
+    "focus_regions": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Focus Regions",
+      "type": "array"
+    },
+    "feeds": {
+      "items": {
+        "$ref": "#/$defs/Feed"
+      },
+      "title": "Feeds",
+      "type": "array"
+    },
+    "enabled": {
+      "default": true,
+      "title": "Enabled",
+      "type": "boolean"
+    },
+    "notes": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Notes"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "homepage",
+    "languages",
+    "country",
+    "type",
+    "ownership",
+    "independence_group",
+    "lenses"
+  ],
+  "title": "Haqiqat source",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

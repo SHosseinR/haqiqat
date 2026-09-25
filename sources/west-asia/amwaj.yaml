@@ -1,0 +1,23 @@
+id: amwaj
+name:
+  en: Amwaj.media
+  fa: امواج مدیا
+homepage: https://amwaj.media
+languages:
+- en
+country: GB
+type: online
+ownership:
+  kind: private
+independence_group: amwaj
+lenses:
+  origin: western
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://amwaj.media/rss
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'

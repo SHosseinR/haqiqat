@@ -1,0 +1,27 @@
+id: arab-news
+name:
+  en: Arab News
+  fa: عرب نیوز
+homepage: https://www.arabnews.com
+languages:
+- en
+country: SA
+type: newspaper
+ownership:
+  kind: private
+  owner: Saudi Research and Media Group
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Arab_News
+    note: Wikipedia article
+independence_group: srmg
+lenses:
+  origin: saudi_uae
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://www.arabnews.com/rss.xml
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'

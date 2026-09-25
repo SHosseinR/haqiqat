@@ -1,0 +1,27 @@
+id: daily-sabah
+name:
+  en: Daily Sabah
+  fa: دیلی صباح
+homepage: https://www.dailysabah.com
+languages:
+- en
+country: TR
+type: newspaper
+ownership:
+  kind: private
+  owner: Turkuvaz Media Group
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Daily_Sabah
+    note: Wikipedia article
+independence_group: turkuvaz
+lenses:
+  origin: turkey
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://www.dailysabah.com/rss
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'

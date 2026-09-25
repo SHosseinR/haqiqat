@@ -1,0 +1,167 @@
+# Place names -> ISO 3166 country code. The first name in each list is the display name.
+# Avoid names that are also common words (e.g. Persian «دوشنبه», «کیف», «جنین», English "us").
+# Matching is on normalized tokens, so Arabic/Persian letter variants (ي/ی, ك/ک) are handled.
+# Extend by pull request; a GeoNames-generated gazetteer (CC BY) can replace this later.
+
+IR:
+  en: [Iran, Iranian, Iranians, Tehran, Isfahan, Mashhad, Tabriz, Shiraz, Ahvaz, Kermanshah,
+       Zahedan, Bandar Abbas, Natanz, Fordow, Bushehr, Khuzestan, Sistan, Baluchestan,
+       Qom, Karaj, Rasht, Urmia, Sanandaj, Arak, Yazd, Kerman, Hormozgan, Strait of Hormuz,
+       Kharg, Chabahar, Mahabad, Evin]
+  fa: [ایران, ایرانی, ایرانیان, تهران, اصفهان, مشهد, تبریز, شیراز, اهواز, کرمانشاه, زاهدان,
+       بندرعباس, نطنز, فردو, بوشهر, خوزستان, سیستان, بلوچستان, قم, کرج, رشت, ارومیه, سنندج,
+       اراک, یزد, کرمان, هرمزگان, تنگه هرمز, خارک, چابهار, مهاباد, اوین]
+IQ:
+  en: [Iraq, Iraqi, Baghdad, Basra, Mosul, Erbil, Kirkuk, Najaf, Karbala, Sulaymaniyah,
+       Kurdistan Region]
+  fa: [عراق, عراقی, بغداد, بصره, موصل, اربیل, کرکوک, نجف, کربلا, سلیمانیه, اقلیم کردستان]
+SY:
+  en: [Syria, Syrian, Damascus, Aleppo, Idlib, Homs, Latakia, Deir ez-Zor, Raqqa]
+  fa: [سوریه, سوری, دمشق, حلب, ادلب, حمص, لاذقیه, دیرالزور, رقه]
+LB:
+  en: [Lebanon, Lebanese, Beirut, Hezbollah, Tyre, Sidon]
+  fa: [لبنان, لبنانی, بیروت, حزب‌الله, صیدا]
+IL:
+  en: [Israel, Israeli, Israelis, Tel Aviv, Jerusalem, Haifa, Netanyahu, IDF, Knesset]
+  fa: [اسرائیل, اسرائیلی, تل‌آویو, تل آویو, اورشلیم, حیفا, نتانیاهو, کنست]
+PS:
+  en: [Palestine, Palestinian, Palestinians, Gaza, West Bank, Ramallah, Hamas, Rafah,
+       Khan Younis, Jenin]
+  fa: [فلسطین, فلسطینی, فلسطینیان, غزه, کرانه باختری, رام‌الله, حماس, رفح, خان یونس]
+JO:
+  en: [Jordan, Jordanian, Amman]
+  fa: [اردن, اردنی]
+SA:
+  en: [Saudi Arabia, Saudi, Saudis, Riyadh, Jeddah, Mecca, Medina]
+  fa: [عربستان, عربستان سعودی, سعودی, ریاض, جده, مکه, مدینه]
+AE:
+  en: [United Arab Emirates, UAE, Emirati, Dubai, Abu Dhabi]
+  fa: [امارات, امارات متحده عربی, اماراتی, دبی, ابوظبی]
+QA:
+  en: [Qatar, Qatari, Doha]
+  fa: [قطر, قطری, دوحه]
+BH:
+  en: [Bahrain, Bahraini, Manama]
+  fa: [بحرین, بحرینی, منامه]
+KW:
+  en: [Kuwait, Kuwaiti]
+  fa: [کویت, کویتی]
+OM:
+  en: [Oman, Omani, Muscat]
+  fa: [عمان, عمانی, مسقط]
+YE:
+  en: [Yemen, Yemeni, Sanaa, Aden, Houthi, Houthis, Hodeidah]
+  fa: [یمن, یمنی, صنعا, عدن, حوثی, حوثی‌ها, انصارالله, حدیده]
+TR:
+  en: [Turkey, Türkiye, Turkish, Ankara, Istanbul, Erdogan]
+  fa: [ترکیه, ترکیه‌ای, آنکارا, استانبول, اردوغان]
+CY:
+  en: [Cyprus, Cypriot, Nicosia]
+  fa: [قبرس, نیکوزیا]
+EG:
+  en: [Egypt, Egyptian, Cairo, Sinai, Suez]
+  fa: [مصر, مصری, قاهره, صحرای سینا, سوئز]
+AF:
+  en: [Afghanistan, Afghan, Afghans, Kabul, Herat, Kandahar, Mazar-i-Sharif, Taliban]
+  fa: [افغانستان, افغان, افغانستانی, کابل, هرات, قندهار, مزار شریف, طالبان]
+PK:
+  en: [Pakistan, Pakistani, Islamabad, Karachi, Lahore, Balochistan, Quetta]
+  fa: [پاکستان, پاکستانی, اسلام‌آباد, کراچی, لاهور, کویته]
+AZ:
+  en: [Azerbaijan, Azerbaijani, Baku]
+  fa: [جمهوری آذربایجان, باکو]
+AM:
+  en: [Armenia, Armenian, Yerevan]
+  fa: [ارمنستان, ارمنی, ایروان]
+GE:
+  en: [Georgia, Tbilisi]
+  fa: [گرجستان, تفلیس]
+US:
+  en: [United States, U.S., USA, America, American, Americans, Washington, Pentagon,
+       White House, State Department, Trump, New York]
+  fa: [آمریکا, امریکا, ایالات متحده, آمریکایی, واشنگتن, پنتاگون, کاخ سفید, وزارت خارجه آمریکا,
+       ترامپ, نیویورک]
+GB:
+  en: [United Kingdom, UK, Britain, British, London]
+  fa: [بریتانیا, انگلیس, انگلستان, بریتانیایی, لندن]
+FR:
+  en: [France, French, Paris, Macron]
+  fa: [فرانسه, فرانسوی, پاریس, مکرون]
+DE:
+  en: [Germany, German, Berlin]
+  fa: [آلمان, آلمانی, برلین]
+RU:
+  en: [Russia, Russian, Moscow, Kremlin, Putin]
+  fa: [روسیه, روسی, مسکو, کرملین, پوتین]
+UA:
+  en: [Ukraine, Ukrainian, Kyiv, Kiev, Zelensky]
+  fa: [اوکراین, اوکراینی, کی‌یف, زلنسکی]
+CN:
+  en: [China, Chinese, Beijing, Xi Jinping]
+  fa: [چین, چینی, پکن, شی جین‌پینگ]
+IN:
+  en: [India, Indian, New Delhi, Mumbai, Modi]
+  fa: [هند, هندی, دهلی نو, بمبئی, مودی]
+JP:
+  en: [Japan, Japanese, Tokyo]
+  fa: [ژاپن, ژاپنی, توکیو]
+KP:
+  en: [North Korea, North Korean, Pyongyang]
+  fa: [کره شمالی, پیونگ‌یانگ]
+KR:
+  en: [South Korea, South Korean, Seoul]
+  fa: [کره جنوبی, سئول]
+AT:
+  en: [Austria, Vienna]
+  fa: [اتریش, وین]
+CH:
+  en: [Switzerland, Swiss, Geneva]
+  fa: [سوئیس, ژنو]
+IT:
+  en: [Italy, Italian, Rome]
+  fa: [ایتالیا, ایتالیایی, رم]
+ES:
+  en: [Spain, Spanish, Madrid]
+  fa: [اسپانیا, مادرید]
+NL:
+  en: [Netherlands, Dutch, The Hague, Amsterdam]
+  fa: [هلند, لاهه, آمستردام]
+BE:
+  en: [Belgium, Brussels]
+  fa: [بلژیک, بروکسل]
+SE:
+  en: [Sweden, Swedish, Stockholm]
+  fa: [سوئد, استکهلم]
+NO:
+  en: [Norway, Oslo]
+  fa: [نروژ, اسلو]
+CA:
+  en: [Canada, Canadian, Ottawa, Toronto]
+  fa: [کانادا, کانادایی, اتاوا, تورنتو]
+AU:
+  en: [Australia, Australian, Canberra, Sydney]
+  fa: [استرالیا, کانبرا, سیدنی]
+TJ:
+  en: [Tajikistan, Dushanbe]
+  fa: [تاجیکستان]
+TM:
+  en: [Turkmenistan, Ashgabat]
+  fa: [ترکمنستان, عشق‌آباد]
+UZ:
+  en: [Uzbekistan, Tashkent]
+  fa: [ازبکستان, تاشکند]
+KZ:
+  en: [Kazakhstan, Astana]
+  fa: [قزاقستان, آستانه]
+SD:
+  en: [Sudan, Sudanese, Khartoum]
+  fa: [سودان, خارطوم]
+LY:
+  en: [Libya, Libyan, Tripoli]
+  fa: [لیبی, طرابلس]
+BR:
+  en: [Brazil, Brazilian]
+  fa: [برزیل]
+VE:
+  en: [Venezuela, Caracas]
+  fa: [ونزوئلا, کاراکاس]

@@ -1,0 +1,26 @@
+id: jerusalem-post
+name:
+  en: The Jerusalem Post
+  fa: جروزالم پست
+homepage: https://www.jpost.com
+languages:
+- en
+country: IL
+type: newspaper
+ownership:
+  kind: private
+  evidence:
+  - url: https://en.wikipedia.org/wiki/The_Jerusalem_Post
+    note: Wikipedia article
+independence_group: jpost
+lenses:
+  origin: israel
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://www.jpost.com/rss/rssfeedsfrontpage.aspx
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'

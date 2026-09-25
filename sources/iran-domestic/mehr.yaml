@@ -1,0 +1,32 @@
+id: mehr
+name:
+  en: Mehr News
+  fa: مهر
+homepage: https://www.mehrnews.com
+languages:
+- fa
+- en
+country: IR
+type: news_agency
+ownership:
+  kind: state
+  state: IR
+  owner: Islamic Propagation (Development) Organization
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Mehr_News_Agency
+    note: Wikipedia article
+independence_group: ir-ipo
+lenses:
+  origin: iran
+  iran: ir_state
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://www.mehrnews.com/rss
+  verified: false
+- url: https://en.mehrnews.com/rss
+  verified: false
+  language: en

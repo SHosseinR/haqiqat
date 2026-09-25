@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}{{ t(lang, 'sources') }} · {{ cfg.site.title[lang] }}{% endblock %}
+{% block other_lang_href %}{{ root }}{{ other }}/sources/{% endblock %}
+{% block content %}
+<h1 class="page">{{ t(lang, 'sources') }} ({{ num(lang, sources|length) }})</h1>
+<table class="sources">
+  <thead><tr>
+    <th>{{ t(lang, 'sources') }}</th><th>{{ t(lang, 'country') }}</th><th>{{ t(lang, 'ownership') }}</th>
+    <th>{{ t(lang, 'group') }}</th><th>{{ t(lang, 'lenses') }}</th><th>{{ t(lang, 'reliability') }}</th>
+  </tr></thead>
+  <tbody>
+  {% for src in sources %}
+  <tr{% if not src.enabled %} class="muted"{% endif %}>
+    <td><a href="{{ src.homepage }}" rel="noopener nofollow">{{ src.name.get(lang) }}</a></td>
+    <td>{{ country_name(src.country, lang) }}</td>
+    <td>{{ OWNERSHIP[src.ownership.kind][lang] }}{% if src.ownership.state %} ({{ country_name(src.ownership.state, lang) }}){% endif %}
+      {% for e in src.ownership.evidence %}<a href="{{ e.url }}" rel="noopener nofollow">[{{ num(lang, loop.index) }}]</a>{% endfor %}</td>
+    <td><code>{{ src.independence_group }}</code></td>
+    <td>{% for axis, pos in src.lenses.items() %}<span class="tag">{{ lenses.position_name(axis, pos, lang) }}</span>{% endfor %}</td>
+    <td>Wikipedia (en): {{ RELIABILITY[src.reliability.wikipedia_en][lang] }}<br>Wikipedia (fa): {{ RELIABILITY[src.reliability.wikipedia_fa][lang] }}</td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

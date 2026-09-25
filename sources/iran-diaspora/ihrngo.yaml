@@ -1,0 +1,32 @@
+id: ihrngo
+name:
+  en: Iran Human Rights
+  fa: سازمان حقوق بشر ایران
+homepage: https://iranhr.net
+languages:
+- fa
+- en
+country: 'NO'
+type: monitor
+ownership:
+  kind: nonprofit
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Iran_Human_Rights
+    note: Wikipedia article
+independence_group: ihrngo
+lenses:
+  origin: monitor
+  iran: rights_monitor
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://iranhr.net/fa/rss/
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'
+- url: https://iranhr.net/en/rss/
+  verified: false
+  language: en
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'

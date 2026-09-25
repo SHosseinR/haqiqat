@@ -1,0 +1,28 @@
+id: times-of-israel
+name:
+  en: The Times of Israel
+  fa: تایمز اسرائیل
+homepage: https://www.timesofisrael.com
+languages:
+- en
+country: IL
+type: online
+ownership:
+  kind: private
+  evidence:
+  - url: https://en.wikipedia.org/wiki/The_Times_of_Israel
+    note: Wikipedia article
+independence_group: timesofisrael
+lenses:
+  origin: israel
+reliability:
+  wikipedia_en: generally_reliable
+  wikipedia_fa: unreviewed
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources
+    note: English Wikipedia perennial sources list; re-check periodically
+focus_regions:
+- west-asia
+feeds:
+- url: https://www.timesofisrael.com/feed/
+  verified: false

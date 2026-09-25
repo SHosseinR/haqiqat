@@ -1,0 +1,26 @@
+id: al-monitor
+name:
+  en: Al-Monitor
+  fa: المانیتور
+homepage: https://www.al-monitor.com
+languages:
+- en
+country: US
+type: online
+ownership:
+  kind: private
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Al-Monitor
+    note: Wikipedia article
+independence_group: al-monitor
+lenses:
+  origin: western
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://www.al-monitor.com/rss
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'

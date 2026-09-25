@@ -1,0 +1,33 @@
+id: hengaw
+name:
+  en: Hengaw
+  fa: هەنگاو / هه‌نگاو
+homepage: https://hengaw.net
+languages:
+- fa
+- en
+country: 'NO'
+type: monitor
+ownership:
+  kind: nonprofit
+  owner: Hengaw Organization for Human Rights
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Hengaw_Organization_for_Human_Rights
+    note: Wikipedia article
+independence_group: hengaw
+lenses:
+  origin: monitor
+  iran: rights_monitor
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://hengaw.net/fa/rss
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'
+- url: https://hengaw.net/en/rss
+  verified: false
+  language: en
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'

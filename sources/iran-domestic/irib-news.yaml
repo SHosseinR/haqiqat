@@ -1,0 +1,29 @@
+id: irib-news
+name:
+  en: IRIB News
+  fa: خبرگزاری صداوسیما
+homepage: https://www.iribnews.ir
+languages:
+- fa
+country: IR
+type: broadcaster
+ownership:
+  kind: state
+  state: IR
+  owner: Islamic Republic of Iran Broadcasting (under the Supreme Leader)
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Islamic_Republic_of_Iran_Broadcasting
+    note: Wikipedia article
+independence_group: ir-irib
+lenses:
+  origin: iran
+  iran: ir_state
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://www.iribnews.ir/fa/rss/allnews
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'

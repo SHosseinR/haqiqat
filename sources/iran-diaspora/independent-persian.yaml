@@ -1,0 +1,29 @@
+id: independent-persian
+name:
+  en: Independent Persian
+  fa: ایندیپندنت فارسی
+homepage: https://www.independentpersian.com
+languages:
+- fa
+country: GB
+type: online
+ownership:
+  kind: private
+  owner: Saudi Research and Media Group (licence from The Independent)
+  evidence:
+  - url: https://en.wikipedia.org/wiki/The_Independent
+    note: Wikipedia article
+independence_group: srmg
+lenses:
+  origin: saudi_uae
+  iran: diaspora_media
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://www.independentpersian.com/rss.xml
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'
+notes: Shares an independence group with Arab News (both SRMG).

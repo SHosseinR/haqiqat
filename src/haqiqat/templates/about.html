@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}{{ t(lang, 'about') }} · {{ cfg.site.title[lang] }}{% endblock %}
+{% block other_lang_href %}{{ root }}{{ other }}/about/{% endblock %}
+{% block content %}
+<article class="about">
+<h1 class="page">{{ t(lang, 'about') }}</h1>
+<p class="lede">{{ t(lang, 'not_news_agency') }}</p>
+{% if lang == 'fa' %}
+<h2>چطور کار می‌کند</h2>
+<ol>
+  <li>فید رسانه‌های همهٔ سوها خوانده می‌شود: رسانه‌های رسمی و حکومتی، اصولگرا و اصلاح‌طلب، رسانه‌های فارسی‌زبان خارج از کشور، نهادهای حقوق بشری و رسانه‌های منطقه و جهان.</li>
+  <li>رونوشت‌ها و بازنشرها شناسایی می‌شوند تا یک گزارش تکراری چند بار شمرده نشود. رسانه‌هایی که مالک یا کنترل مشترک دارند «یک منبع مستقل» حساب می‌شوند.</li>
+  <li>گزارش‌های مربوط به یک رویداد، حتی به زبان‌های مختلف، کنار هم قرار می‌گیرند.</li>
+  <li>برای خبرهای مهم، هوش مصنوعی خلاصه‌ای بی‌طرف به دو زبان می‌نویسد و برای هر واقعیت می‌گوید کدام گزارش‌ها آن را تأیید یا رد می‌کنند. برچسب‌ها («تأییدشده از چند سو»، «فقط از یک سو»، «مورد اختلاف»…) را کد و با قواعد منتشرشده محاسبه می‌کند، نه هوش مصنوعی.</li>
+  <li>رتبه‌بندی با فرمولی عمومی انجام می‌شود: تعداد منابع مستقل، تنوع زاویه‌ها، گستردگی جغرافیایی، سرعت و اهمیت. کلیک و «تعامل» هیچ نقشی ندارد.</li>
+</ol>
+<p>همه‌چیز متن‌باز است: کد، فهرست منابع و برچسب‌هایشان با شواهد، پرامپت‌ها و سابقهٔ هر نسخه از هر خلاصه. <a href="{{ cfg.site.source_repo_url }}/blob/main/docs/methodology.md">روش کار کامل</a></p>
+{% else %}
+<h2>How it works</h2>
+<ol>
+  <li>We read feeds from outlets on every side: state and official media, principlist and reformist outlets, Persian-language media abroad, human-rights monitors, and regional and international media.</li>
+  <li>Copies and republished wire stories are detected, so one report is never counted twice. Outlets under common ownership or control count as one independent source.</li>
+  <li>Reports about the same event are grouped together, across languages.</li>
+  <li>For important stories an AI writes a neutral summary in both languages and reports which articles support or contradict each fact. The labels ("widely confirmed", "reported by one side", "disputed"…) are computed by code with published rules, not by the AI.</li>
+  <li>Ranking uses a public formula: independent sources, diversity of perspectives, geographic scope, speed and impact. Clicks and "engagement" play no part.</li>
+</ol>
+<p>Everything is open: the code, the source list with its evidence-backed labels, the prompts, and the history of every version of every summary. <a href="{{ cfg.site.source_repo_url }}/blob/main/docs/methodology.md">Full methodology</a></p>
+{% endif %}
+</article>
+{% endblock %}

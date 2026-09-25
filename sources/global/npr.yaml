@@ -1,0 +1,29 @@
+id: npr
+name:
+  en: NPR
+  fa: ان‌پی‌آر
+homepage: https://www.npr.org
+languages:
+- en
+country: US
+type: broadcaster
+ownership:
+  kind: nonprofit
+  evidence:
+  - url: https://en.wikipedia.org/wiki/NPR
+    note: Wikipedia article
+independence_group: npr
+lenses:
+  origin: western
+reliability:
+  wikipedia_en: generally_reliable
+  wikipedia_fa: unreviewed
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources
+    note: English Wikipedia perennial sources list; re-check periodically
+focus_regions:
+- world
+- west-asia
+feeds:
+- url: https://feeds.npr.org/1004/rss.xml
+  verified: false

@@ -1,0 +1,27 @@
+id: fararu
+name:
+  en: Fararu
+  fa: فرارو
+homepage: https://fararu.com
+languages:
+- fa
+country: IR
+type: online
+ownership:
+  kind: private
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Fararu
+    note: Wikipedia article
+independence_group: ir-fararu
+lenses:
+  origin: iran
+  iran: ir_reformist
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://fararu.com/fa/rss/allnews
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'

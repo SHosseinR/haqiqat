@@ -1,0 +1,32 @@
+id: press-tv
+name:
+  en: Press TV
+  fa: پرس‌تی‌وی
+homepage: https://www.presstv.ir
+languages:
+- en
+country: IR
+type: broadcaster
+ownership:
+  kind: state
+  state: IR
+  owner: Islamic Republic of Iran Broadcasting
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Press_TV
+    note: Wikipedia article
+independence_group: ir-irib
+lenses:
+  origin: iran
+  iran: ir_state
+reliability:
+  wikipedia_en: deprecated
+  wikipedia_fa: unreviewed
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources
+    note: English Wikipedia perennial sources list; re-check periodically
+focus_regions:
+- west-asia
+feeds:
+- url: https://www.presstv.ir/rss.xml
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'

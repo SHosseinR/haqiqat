@@ -1,0 +1,27 @@
+id: donya-e-eqtesad
+name:
+  en: Donya-e-Eqtesad
+  fa: دنیای اقتصاد
+homepage: https://donya-e-eqtesad.com
+languages:
+- fa
+country: IR
+type: newspaper
+ownership:
+  kind: private
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Donya-e-Eqtesad
+    note: Wikipedia article
+independence_group: ir-donya-e-eqtesad
+lenses:
+  origin: iran
+  iran: ir_nonfactional
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://donya-e-eqtesad.com/fa/rss/allnews
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'

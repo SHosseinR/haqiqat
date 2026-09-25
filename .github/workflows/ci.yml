@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --locked
+      - name: Lint
+        run: uv run ruff check .
+      - name: Tests (offline)
+        run: uv run pytest
+      - name: Validate source registry
+        run: uv run haqiqat validate-sources
+      - name: Source schema is up to date
+        run: |
+          uv run haqiqat export-schema
+          git diff --exit-code sources/schema.json

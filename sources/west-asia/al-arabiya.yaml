@@ -1,0 +1,28 @@
+id: al-arabiya
+name:
+  en: Al Arabiya English
+  fa: العربیه انگلیسی
+homepage: https://english.alarabiya.net
+languages:
+- en
+country: SA
+type: broadcaster
+ownership:
+  kind: private
+  owner: MBC Group
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Al_Arabiya
+    note: Wikipedia article
+independence_group: mbc
+lenses:
+  origin: saudi_uae
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://english.alarabiya.net/.mrss/en/news.xml
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'
+notes: MBC Group has reported Saudi state ownership links; to be reviewed with evidence.

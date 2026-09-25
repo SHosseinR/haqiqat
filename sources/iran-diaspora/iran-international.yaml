@@ -1,0 +1,35 @@
+id: iran-international
+name:
+  en: Iran International
+  fa: ایران اینترنشنال
+homepage: https://www.iranintl.com
+languages:
+- fa
+- en
+country: GB
+type: broadcaster
+ownership:
+  kind: private
+  owner: Volant Media
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Iran_International
+    note: Wikipedia article
+independence_group: iranintl
+lenses:
+  origin: persian_diaspora
+  iran: diaspora_media
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://www.iranintl.com/fa/rss
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'
+- url: https://www.iranintl.com/en/rss
+  verified: false
+  language: en
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'
+notes: Funding has been reported to have Saudi links; the channel disputes this. See the Wikipedia article's
+  sources.

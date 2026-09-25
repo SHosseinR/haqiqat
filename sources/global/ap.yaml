@@ -1,0 +1,32 @@
+id: ap
+name:
+  en: Associated Press
+  fa: آسوشیتدپرس
+homepage: https://apnews.com
+languages:
+- en
+country: US
+type: wire
+ownership:
+  kind: nonprofit
+  owner: Cooperative of U.S. newspapers and broadcasters
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Associated_Press
+    note: Wikipedia article
+independence_group: ap
+lenses:
+  origin: western
+reliability:
+  wikipedia_en: generally_reliable
+  wikipedia_fa: unreviewed
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources
+    note: English Wikipedia perennial sources list; re-check periodically
+focus_regions:
+- world
+- west-asia
+feeds:
+- url: https://apnews.com/news-sitemap-content.xml
+  verified: false
+  kind: sitemap
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'

@@ -1,0 +1,27 @@
+id: khabaronline
+name:
+  en: Khabar Online
+  fa: خبرآنلاین
+homepage: https://www.khabaronline.ir
+languages:
+- fa
+country: IR
+type: online
+ownership:
+  kind: private
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Khabar_Online
+    note: Wikipedia article
+independence_group: ir-khabaronline
+lenses:
+  origin: iran
+  iran: ir_principlist
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://www.khabaronline.ir/rss
+  verified: false
+notes: Moderate conservative (associated with Ali Larijani). Position to be reviewed.

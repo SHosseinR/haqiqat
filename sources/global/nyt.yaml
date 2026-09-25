@@ -1,0 +1,32 @@
+id: nyt
+name:
+  en: The New York Times
+  fa: نیویورک تایمز
+homepage: https://www.nytimes.com
+languages:
+- en
+country: US
+type: newspaper
+ownership:
+  kind: private
+  owner: The New York Times Company
+  evidence:
+  - url: https://en.wikipedia.org/wiki/The_New_York_Times
+    note: Wikipedia article
+independence_group: nyt
+lenses:
+  origin: western
+reliability:
+  wikipedia_en: generally_reliable
+  wikipedia_fa: unreviewed
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources
+    note: English Wikipedia perennial sources list; re-check periodically
+focus_regions:
+- world
+- west-asia
+feeds:
+- url: https://rss.nytimes.com/services/xml/rss/nyt/World.xml
+  verified: false
+- url: https://rss.nytimes.com/services/xml/rss/nyt/MiddleEast.xml
+  verified: false

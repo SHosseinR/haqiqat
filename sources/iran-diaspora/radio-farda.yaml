@@ -1,0 +1,31 @@
+id: radio-farda
+name:
+  en: Radio Farda
+  fa: رادیو فردا
+homepage: https://www.radiofarda.com
+languages:
+- fa
+country: CZ
+type: broadcaster
+ownership:
+  kind: public
+  state: US
+  owner: RFE/RL (funded by the U.S. Agency for Global Media)
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Radio_Farda
+    note: Wikipedia article
+independence_group: usagm
+lenses:
+  origin: western
+  iran: foreign_state_persian
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://www.radiofarda.com/rssfeeds
+  verified: false
+  enabled: false
+  note: 'Placeholder: replace with a feed URL listed on this page, then enable.'
+notes: Shares an independence group with VOA Persian (both USAGM-funded).

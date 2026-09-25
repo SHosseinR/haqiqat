@@ -1,0 +1,27 @@
+id: rudaw
+name:
+  en: Rudaw
+  fa: رووداو
+homepage: https://www.rudaw.net
+languages:
+- en
+country: IQ
+type: broadcaster
+ownership:
+  kind: private
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Rudaw_Media_Network
+    note: Wikipedia article
+independence_group: kdp-affiliated
+lenses:
+  origin: kurdish
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://www.rudaw.net/english/rss
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'
+notes: 'Grouped with Kurdistan24: both reported close to the Kurdistan Democratic Party.'

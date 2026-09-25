@@ -1,0 +1,28 @@
+id: tass
+name:
+  en: TASS
+  fa: تاس
+homepage: https://tass.com
+languages:
+- en
+country: RU
+type: news_agency
+ownership:
+  kind: state
+  state: RU
+  evidence:
+  - url: https://en.wikipedia.org/wiki/TASS
+    note: Wikipedia article
+independence_group: ru-state
+lenses:
+  origin: russia
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- world
+- west-asia
+feeds:
+- url: https://tass.com/rss/v2.xml
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'

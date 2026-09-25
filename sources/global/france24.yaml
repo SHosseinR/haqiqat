@@ -1,0 +1,33 @@
+id: france24
+name:
+  en: France 24
+  fa: فرانس ۲۴
+homepage: https://www.france24.com/en/
+languages:
+- en
+country: FR
+type: broadcaster
+ownership:
+  kind: public
+  state: FR
+  owner: France Médias Monde
+  evidence:
+  - url: https://en.wikipedia.org/wiki/France_24
+    note: Wikipedia article
+independence_group: france-medias-monde
+lenses:
+  origin: western
+reliability:
+  wikipedia_en: generally_reliable
+  wikipedia_fa: unreviewed
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources
+    note: English Wikipedia perennial sources list; re-check periodically
+focus_regions:
+- world
+- west-asia
+feeds:
+- url: https://www.france24.com/en/middle-east/rss
+  verified: false
+- url: https://www.france24.com/en/rss
+  verified: false

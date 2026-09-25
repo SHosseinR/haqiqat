@@ -1,0 +1,26 @@
+id: lorient-today
+name:
+  en: L'Orient Today
+  fa: لوریان تودی
+homepage: https://today.lorientlejour.com
+languages:
+- en
+country: LB
+type: newspaper
+ownership:
+  kind: private
+  evidence:
+  - url: https://en.wikipedia.org/wiki/L%27Orient-Le_Jour
+    note: Wikipedia article
+independence_group: lorient
+lenses:
+  origin: arab_other
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://today.lorientlejour.com/rss
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'

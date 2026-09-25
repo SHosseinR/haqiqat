@@ -1,0 +1,27 @@
+id: trt-world
+name:
+  en: TRT World
+  fa: تی‌آرتی ورلد
+homepage: https://www.trtworld.com
+languages:
+- en
+country: TR
+type: broadcaster
+ownership:
+  kind: state
+  state: TR
+  evidence:
+  - url: https://en.wikipedia.org/wiki/TRT_World
+    note: Wikipedia article
+independence_group: tr-state
+lenses:
+  origin: turkey
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://www.trtworld.com/rss
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'

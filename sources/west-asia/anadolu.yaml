@@ -1,0 +1,33 @@
+id: anadolu
+name:
+  en: Anadolu Agency
+  fa: خبرگزاری آناتولی
+homepage: https://www.aa.com.tr
+languages:
+- en
+- fa
+country: TR
+type: news_agency
+ownership:
+  kind: state
+  state: TR
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Anadolu_Agency
+    note: Wikipedia article
+independence_group: tr-state
+lenses:
+  origin: turkey
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://www.aa.com.tr/en/rss/default?cat=guncel
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'
+- url: https://www.aa.com.tr/fa/rss/default?cat=guncel
+  verified: false
+  language: fa
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'
+notes: Shares an independence group with TRT World (both Turkish state media).

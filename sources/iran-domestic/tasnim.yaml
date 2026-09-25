@@ -1,0 +1,35 @@
+id: tasnim
+name:
+  en: Tasnim News
+  fa: تسنیم
+homepage: https://www.tasnimnews.com
+languages:
+- fa
+- en
+country: IR
+type: news_agency
+ownership:
+  kind: state
+  state: IR
+  owner: Reported affiliation with the IRGC
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Tasnim_News_Agency
+    note: Wikipedia article
+independence_group: ir-irgc-affiliated
+lenses:
+  origin: iran
+  iran: ir_state
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://www.tasnimnews.com/fa/rss/feed/0/0/0
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'
+- url: https://www.tasnimnews.com/en/rss/feed/0/0/0
+  verified: false
+  language: en
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'
+notes: Shares an independence group with Fars (both reported IRGC-affiliated).

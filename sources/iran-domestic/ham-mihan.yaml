@@ -1,0 +1,24 @@
+id: ham-mihan
+name:
+  en: Ham-Mihan
+  fa: هم‌میهن
+homepage: https://hammihanonline.ir
+languages:
+- fa
+country: IR
+type: newspaper
+ownership:
+  kind: private
+independence_group: ir-ham-mihan
+lenses:
+  origin: iran
+  iran: ir_reformist
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://hammihanonline.ir/fa/rss/allnews
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'

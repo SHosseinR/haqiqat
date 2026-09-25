@@ -1,0 +1,31 @@
+id: cnn
+name:
+  en: CNN
+  fa: سی‌ان‌ان
+homepage: https://edition.cnn.com
+languages:
+- en
+country: US
+type: broadcaster
+ownership:
+  kind: private
+  owner: Warner Bros. Discovery
+  evidence:
+  - url: https://en.wikipedia.org/wiki/CNN
+    note: Wikipedia article
+independence_group: cnn
+lenses:
+  origin: western
+reliability:
+  wikipedia_en: generally_reliable
+  wikipedia_fa: unreviewed
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources
+    note: English Wikipedia perennial sources list; re-check periodically
+focus_regions:
+- world
+- west-asia
+feeds:
+- url: http://rss.cnn.com/rss/edition_world.rss
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'

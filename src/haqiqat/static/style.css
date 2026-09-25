@@ -1,0 +1,89 @@
+/* Haqiqat: small, fast, readable on slow connections. No web fonts are downloaded;
+   Vazirmatn is used if installed, then system fonts that render Persian well. */
+:root {
+  --bg: #fbfaf8;
+  --fg: #1d1d1f;
+  --muted: #6b6b70;
+  --line: #e4e1dc;
+  --card: #ffffff;
+  --accent: #1f5f8b;
+  --confirmed: #1d7a46;
+  --corroborated: #3f8f5f;
+  --one-side: #a86b00;
+  --single: #7a7a80;
+  --disputed: #b23b3b;
+  --blind: #6a4fb3;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #151517; --fg: #ececee; --muted: #a1a1a8; --line: #2e2e33; --card: #1d1d20;
+    --accent: #6fb1e0; --confirmed: #5cc98a; --corroborated: #7cc79a; --one-side: #e0a340;
+    --single: #a1a1a8; --disputed: #ef7d7d; --blind: #a996ea;
+  }
+}
+* { box-sizing: border-box; }
+html { font-size: 17px; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg); line-height: 1.65;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+[dir="rtl"] body, body[dir="rtl"], html[dir="rtl"] body {
+  font-family: Vazirmatn, "Vazir", Tahoma, "Segoe UI", "Noto Naskh Arabic", sans-serif;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+header.site { border-bottom: 1px solid var(--line); background: var(--card); }
+header.site .wrap { display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: baseline; padding-block: 12px; }
+.brand { font-weight: 800; font-size: 1.35rem; color: var(--fg); }
+.tagline { color: var(--muted); font-size: .85rem; flex: 1 1 200px; }
+nav.regions, nav.meta { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: .92rem; }
+nav.regions { width: 100%; }
+nav a[aria-current="page"] { font-weight: 700; color: var(--fg); border-bottom: 2px solid var(--accent); }
+main { padding-block: 16px 32px; }
+h1.page { font-size: 1.4rem; margin: 8px 0 12px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; margin: 12px 0; }
+.card h2 { font-size: 1.12rem; margin: 0 0 6px; line-height: 1.45; }
+.card h2 a { color: var(--fg); }
+.summary { margin: 4px 0 8px; }
+.meta { color: var(--muted); font-size: .85rem; display: flex; flex-wrap: wrap; gap: 4px 12px; margin: 4px 0; }
+.tag { background: var(--bg); border: 1px solid var(--line); border-radius: 999px; padding: 0 8px; font-size: .8rem; }
+.labels { margin: 6px 0 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.badge { display: inline-block; font-size: .78rem; font-weight: 600; border-radius: 6px; padding: 1px 8px; border: 1px solid currentColor; white-space: nowrap; }
+.badge.confirmed { color: var(--confirmed); }
+.badge.corroborated { color: var(--corroborated); }
+.badge.one_side { color: var(--one-side); }
+.badge.single_source { color: var(--single); }
+.badge.disputed { color: var(--disputed); }
+.badge.blindspot { color: var(--blind); }
+.muted { color: var(--muted); }
+.story h1 { font-size: 1.6rem; line-height: 1.4; margin: 8px 0; }
+.story h2 { font-size: 1.1rem; margin: 26px 0 8px; border-bottom: 1px solid var(--line); padding-bottom: 4px; }
+.lede { font-size: 1.08rem; }
+.note { color: var(--muted); font-size: .85rem; }
+.facts { list-style: none; padding: 0; margin: 0; }
+.fact { padding: 8px 0; border-bottom: 1px dashed var(--line); display: grid; gap: 2px; }
+.fact .badge { justify-self: start; }
+.attr { color: var(--muted); }
+.srcs { font-size: .8rem; display: flex; flex-wrap: wrap; gap: 2px 8px; }
+.src { color: var(--muted); }
+.against { color: var(--disputed); }
+.dispute h3 { font-size: 1rem; margin: 10px 0 4px; }
+.new-since { background: var(--card); border: 1px solid var(--accent); border-radius: 8px; padding: 8px 12px; margin: 12px 0; font-size: .9rem; }
+.new-since ul { margin: 6px 0 0; padding-inline-start: 18px; }
+.camps { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.camps li { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 2px 10px; font-size: .88rem; }
+.camps .n { font-weight: 700; }
+.reports { padding-inline-start: 18px; font-size: .92rem; }
+.reports li { margin: 4px 0; }
+.reports .camp { font-size: .75rem; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 0 5px; margin-inline-end: 6px; }
+.provenance { margin-top: 28px; color: var(--muted); font-size: .82rem; border-top: 1px solid var(--line); }
+table.sources { width: 100%; border-collapse: collapse; font-size: .85rem; }
+table.sources th, table.sources td { border-bottom: 1px solid var(--line); padding: 6px 4px; text-align: start; vertical-align: top; }
+footer.site { border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; padding-block: 16px; }
+body.landing main { padding-top: 12vh; text-align: center; }
+body.landing .choose { display: flex; gap: 16px; justify-content: center; font-size: 1.3rem; margin-top: 24px; }
+@media (max-width: 600px) {
+  html { font-size: 16px; }
+  table.sources { display: block; overflow-x: auto; }
+}

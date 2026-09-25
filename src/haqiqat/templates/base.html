@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="{{ lang }}" dir="{{ t(lang, 'dir') }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}{{ cfg.site.title[lang] }}{% endblock %}</title>
+<meta name="description" content="{{ t(lang, 'tagline') }}">
+<link rel="stylesheet" href="{{ root }}assets/style.css">
+<link rel="alternate" type="application/rss+xml" href="{{ root }}{{ lang }}/feed.xml">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="{{ root }}{{ lang }}/">{{ cfg.site.title[lang] }}</a>
+    <span class="tagline">{{ t(lang, 'tagline') }}</span>
+    <nav class="regions" aria-label="{{ t(lang, 'regions') }}">
+      {% for rid in regions.order %}
+      {% set r = regions.regions[rid] %}
+      {% set href = root ~ lang ~ '/' if not r.countries else root ~ lang ~ '/region/' ~ rid ~ '/' %}
+      <a href="{{ href }}" data-region="{{ rid }}"{% if nav_region is defined and nav_region == rid %} aria-current="page"{% endif %}>{{ r.name[lang] }}</a>
+      {% endfor %}
+    </nav>
+    <nav class="meta">
+      <a href="{{ root }}{{ lang }}/about/">{{ t(lang, 'about') }}</a>
+      <a href="{{ root }}{{ lang }}/sources/">{{ t(lang, 'sources') }}</a>
+      {% if langs|length > 1 %}<a href="{% block other_lang_href %}{{ root }}{{ other }}/{% endblock %}" lang="{{ other }}" data-lang="{{ other }}">{{ t(lang, 'other_lang') }}</a>{% endif %}
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+{% block content %}{% endblock %}
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>{{ t(lang, 'not_news_agency') }}</p>
+    <p>
+      <a href="{{ cfg.site.source_repo_url }}">{{ t(lang, 'source_code') }}</a> ·
+      <a href="{{ root }}{{ lang }}/feed.xml">{{ t(lang, 'rss') }}</a> ·
+      <a href="{{ root }}api/stories.json">{{ t(lang, 'data') }}</a> ·
+      {{ t(lang, 'updated', time=fmt_time(built_at, lang)) }}
+    </p>
+  </div>
+</footer>
+<script src="{{ root }}assets/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+id: voa-persian
+name:
+  en: VOA Persian
+  fa: صدای آمریکا
+homepage: https://ir.voanews.com
+languages:
+- fa
+country: US
+type: broadcaster
+ownership:
+  kind: public
+  state: US
+  owner: Voice of America (U.S. Agency for Global Media)
+  evidence:
+  - url: https://en.wikipedia.org/wiki/VOA_Persian
+    note: Wikipedia article
+independence_group: usagm
+lenses:
+  origin: western
+  iran: foreign_state_persian
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://ir.voanews.com/rssfeeds
+  verified: false
+  enabled: false
+  note: 'Placeholder: replace with a feed URL listed on this page, then enable.'

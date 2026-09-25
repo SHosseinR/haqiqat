@@ -1,0 +1,32 @@
+id: guardian
+name:
+  en: The Guardian
+  fa: گاردین
+homepage: https://www.theguardian.com
+languages:
+- en
+country: GB
+type: newspaper
+ownership:
+  kind: private
+  owner: Guardian Media Group (Scott Trust)
+  evidence:
+  - url: https://en.wikipedia.org/wiki/The_Guardian
+    note: Wikipedia article
+independence_group: guardian
+lenses:
+  origin: western
+reliability:
+  wikipedia_en: generally_reliable
+  wikipedia_fa: unreviewed
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources
+    note: English Wikipedia perennial sources list; re-check periodically
+focus_regions:
+- world
+- west-asia
+feeds:
+- url: https://www.theguardian.com/world/rss
+  verified: false
+- url: https://www.theguardian.com/world/middleeast/rss
+  verified: false

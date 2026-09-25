@@ -1,0 +1,29 @@
+id: dw-persian
+name:
+  en: DW Persian
+  fa: دویچه وله فارسی
+homepage: https://www.dw.com/fa-ir
+languages:
+- fa
+country: DE
+type: broadcaster
+ownership:
+  kind: public
+  state: DE
+  owner: Deutsche Welle
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Deutsche_Welle
+    note: Wikipedia article
+independence_group: dw
+lenses:
+  origin: western
+  iran: foreign_state_persian
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://rss.dw.com/rdf/rss-fa-all
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'

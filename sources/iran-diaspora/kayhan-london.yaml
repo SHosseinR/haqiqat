@@ -1,0 +1,27 @@
+id: kayhan-london
+name:
+  en: Kayhan London
+  fa: کیهان لندن
+homepage: https://kayhan.london
+languages:
+- fa
+country: GB
+type: newspaper
+ownership:
+  kind: private
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Kayhan_London
+    note: Wikipedia article
+independence_group: kayhan-london
+lenses:
+  origin: persian_diaspora
+  iran: diaspora_media
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://kayhan.london/fa/feed/
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'

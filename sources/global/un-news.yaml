@@ -1,0 +1,29 @@
+id: un-news
+name:
+  en: UN News
+  fa: اخبار سازمان ملل
+homepage: https://news.un.org/en/
+languages:
+- en
+country: US
+type: intergovernmental
+ownership:
+  kind: public
+  owner: United Nations
+  evidence:
+  - url: https://en.wikipedia.org/wiki/United_Nations
+    note: Wikipedia article
+independence_group: un
+lenses:
+  origin: intl_org
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- world
+- west-asia
+feeds:
+- url: https://news.un.org/feed/subscribe/en/news/region/middle-east/feed/rss.xml
+  verified: false
+- url: https://news.un.org/feed/subscribe/en/news/all/rss.xml
+  verified: false

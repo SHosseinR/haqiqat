@@ -1,0 +1,29 @@
+id: kayhan
+name:
+  en: Kayhan
+  fa: کیهان
+homepage: https://kayhan.ir
+languages:
+- fa
+country: IR
+type: newspaper
+ownership:
+  kind: state
+  state: IR
+  owner: Kayhan Institute (editor appointed by the Supreme Leader)
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Kayhan
+    note: Wikipedia article
+independence_group: ir-kayhan
+lenses:
+  origin: iran
+  iran: ir_principlist
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://kayhan.ir/fa/rss/allnews
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'

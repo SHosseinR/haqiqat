@@ -1,0 +1,29 @@
+id: dw-english
+name:
+  en: DW News
+  fa: دویچه وله
+homepage: https://www.dw.com/en
+languages:
+- en
+country: DE
+type: broadcaster
+ownership:
+  kind: public
+  state: DE
+  owner: Deutsche Welle
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Deutsche_Welle
+    note: Wikipedia article
+independence_group: dw
+lenses:
+  origin: western
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- world
+- west-asia
+feeds:
+- url: https://rss.dw.com/rdf/rss-en-all
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'

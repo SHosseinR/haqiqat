@@ -1,0 +1,31 @@
+id: bbc-persian
+name:
+  en: BBC Persian
+  fa: بی‌بی‌سی فارسی
+homepage: https://www.bbc.com/persian
+languages:
+- fa
+country: GB
+type: broadcaster
+ownership:
+  kind: public
+  state: GB
+  owner: BBC World Service
+  evidence:
+  - url: https://en.wikipedia.org/wiki/BBC_Persian
+    note: Wikipedia article
+independence_group: bbc
+lenses:
+  origin: western
+  iran: foreign_state_persian
+reliability:
+  wikipedia_en: generally_reliable
+  wikipedia_fa: unreviewed
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources
+    note: English Wikipedia perennial sources list; re-check periodically
+focus_regions:
+- west-asia
+feeds:
+- url: https://feeds.bbci.co.uk/persian/rss.xml
+  verified: false

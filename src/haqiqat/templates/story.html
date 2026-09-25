@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% from "_macros.html" import sources_line, camp_bar %}
+{% block title %}{{ s.title[lang] }} · {{ cfg.site.title[lang] }}{% endblock %}
+{% block other_lang_href %}{{ root }}{{ other }}/story/{{ s.id }}/{% endblock %}
+{% block content %}
+<article class="story">
+  <h1 dir="auto">{{ s.title[lang] }}</h1>
+  <p class="meta">
+    <span>{{ t(lang, 'independent_sources', n=s.n_groups) }}</span>
+    <span>{{ fmt_time(s.first_article_at, lang) }} – {{ fmt_time(s.last_article_at, lang) }}</span>
+    {% for c in s.countries %}<span class="tag">{{ country_name(c, lang) }}</span>{% endfor %}
+    {% if s.category %}<span class="tag">{{ topic_name(s.category, lang) }}</span>{% endif %}
+  </p>
+
+  {% if s.kind == 'llm' %}
+  <p class="lede" dir="auto">{{ s.summary[lang] }}</p>
+  <p class="note">{{ t(lang, 'ai_summary') }} · {{ t(lang, 'version', v=s.synth.version) }} · {{ fmt_time(s.synth.created_at, lang) }}</p>
+
+  {% if s.new_since_summary %}
+  <aside class="new-since">
+    <strong>{{ t(lang, 'new_since', n=s.new_since_summary|length, time=fmt_time(s.synth.created_at, lang)) }}</strong>
+    <ul>{% for a in s.new_since_summary %}<li><a href="{{ a.url }}" rel="noopener nofollow" hreflang="{{ a.lang }}" dir="auto">{{ a.title }}</a> <span class="muted">— {{ a.source_name[lang] or a.source_name.en }}</span></li>{% endfor %}</ul>
+  </aside>
+  {% endif %}
+
+  <h2>{{ t(lang, 'key_facts') }}</h2>
+  <ul class="facts">
+    {% for f in s.facts %}
+    <li class="fact">
+      <span class="badge {{ f.label }}" title="{{ num(lang, f.n_groups) }}">{{ LABEL_NAMES[f.label][lang] }}</span>
+      <span class="text" dir="auto">{{ f.text[lang] or f.text.en }}{% if f.attributed_to %} <span class="attr">({{ t(lang, 'according_to', x=f.attributed_to) }})</span>{% endif %}</span>
+      <span class="srcs">{{ sources_line(f.supporting, s, lang) }}{% if f.contradicting %} <span class="against">≠ {{ sources_line(f.contradicting, s, lang) }}</span>{% endif %}</span>
+    </li>
+    {% endfor %}
+  </ul>
+
+  {% if s.disputes %}
+  <h2>{{ t(lang, 'disputes') }}</h2>
+  {% for d in s.disputes %}
+  <div class="dispute">
+    <h3>{{ d.topic[lang] or d.topic.en }}</h3>
+    <ul>{% for p in d.positions %}<li>{{ p.text[lang] or p.text.en }} <span class="srcs">{{ sources_line(p.articles, s, lang) }}</span></li>{% endfor %}</ul>
+  </div>
+  {% endfor %}
+  {% endif %}
+
+  {% elif s.kind == 'extractive' %}
+  <p class="note">{{ t(lang, 'extractive_note') }}</p>
+  <ul class="facts">
+    {% for x in s.extractive[lang] %}
+    <li class="fact"><span class="text" dir="auto">«{{ x.text }}»</span> <span class="srcs">{{ sources_line(x.article_ids, s, lang) }}</span></li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="note">{{ t(lang, 'headlines_only') }}</p>
+  {% endif %}
+
+  <h2>{{ t(lang, 'coverage') }}</h2>
+  {{ camp_bar(s, lang) }}
+  {% if s.blindspot %}<p class="badge blindspot">{{ t(lang, 'blindspot', camp=camp_name(s.blindspot, lang)) }}</p>{% endif %}
+
+  <h2>{{ t(lang, 'all_reports') }}</h2>
+  <ul class="reports">
+    {% for a in s.articles|sort(attribute='published_at') %}
+    <li>
+      <span class="camp">{{ camp_name(a.camp, lang) }}</span>
+      <a href="{{ a.url }}" rel="noopener nofollow" hreflang="{{ a.lang }}" dir="auto">{{ a.title }}</a>
+      <span class="muted">— {{ a.source_name[lang] or a.source_name.en }} · {{ fmt_time(a.published_at, lang) }}{% if a.is_dup %} · {{ t(lang, 'copy') }}{% endif %}</span>
+    </li>
+    {% endfor %}
+  </ul>
+
+  {% if s.storyline_id %}
+  <p><a href="{{ root }}{{ lang }}/storyline/{{ s.storyline_id }}/">{{ t(lang, 'storyline') }} →</a></p>
+  {% endif %}
+
+  <footer class="provenance">
+    {% if s.synth %}<p>{{ t(lang, 'provenance', model=s.synth.model, pv=s.synth.prompt_version, n=s.synth.input_article_ids|length) }}</p>{% endif %}
+    <p>{{ t(lang, 'significance') }}: {{ num(lang, s.score|round(2)) }} · <a href="{{ root }}api/story/{{ s.id }}.json">{{ t(lang, 'data') }}</a></p>
+  </footer>
+</article>
+{% endblock %}

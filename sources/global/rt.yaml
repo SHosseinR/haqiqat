@@ -1,0 +1,32 @@
+id: rt
+name:
+  en: RT
+  fa: آرتی
+homepage: https://www.rt.com
+languages:
+- en
+country: RU
+type: broadcaster
+ownership:
+  kind: state
+  state: RU
+  owner: TV-Novosti (Russian state-funded)
+  evidence:
+  - url: https://en.wikipedia.org/wiki/RT_(TV_network)
+    note: Wikipedia article
+independence_group: ru-state
+lenses:
+  origin: russia
+reliability:
+  wikipedia_en: deprecated
+  wikipedia_fa: unreviewed
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources
+    note: English Wikipedia perennial sources list; re-check periodically
+focus_regions:
+- world
+- west-asia
+feeds:
+- url: https://www.rt.com/rss/news/
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'

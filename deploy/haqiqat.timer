@@ -1,0 +1,11 @@
+[Unit]
+Description=Run the Haqiqat pipeline every 30 minutes
+
+[Timer]
+OnBootSec=2min
+OnCalendar=*:0/30
+Persistent=true
+RandomizedDelaySec=60
+
+[Install]
+WantedBy=timers.target

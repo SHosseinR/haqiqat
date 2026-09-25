@@ -1,0 +1,25 @@
+id: asriran
+name:
+  en: Asr Iran
+  fa: عصر ایران
+homepage: https://www.asriran.com
+languages:
+- fa
+country: IR
+type: online
+ownership:
+  kind: private
+independence_group: ir-asriran
+lenses:
+  origin: iran
+  iran: ir_reformist
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://www.asriran.com/fa/rss/allnews
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'
+notes: Moderate/pragmatic. Position to be reviewed with evidence.

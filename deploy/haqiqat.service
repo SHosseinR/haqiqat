@@ -1,0 +1,18 @@
+[Unit]
+Description=Haqiqat pipeline (ingest, process, synthesize, publish)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=haqiqat
+WorkingDirectory=/opt/haqiqat/app
+EnvironmentFile=/etc/haqiqat.env
+ExecStart=/opt/haqiqat/app/.venv/bin/haqiqat run --once
+TimeoutStartSec=25min
+Nice=10
+# Hardening
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/opt/haqiqat
+PrivateTmp=true

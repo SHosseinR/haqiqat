@@ -1,0 +1,28 @@
+id: xinhua
+name:
+  en: Xinhua
+  fa: شین‌هوا
+homepage: https://english.news.cn
+languages:
+- en
+country: CN
+type: news_agency
+ownership:
+  kind: state
+  state: CN
+  evidence:
+  - url: https://en.wikipedia.org/wiki/Xinhua_News_Agency
+    note: Wikipedia article
+independence_group: cn-state
+lenses:
+  origin: china
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- world
+- west-asia
+feeds:
+- url: https://english.news.cn/rss/worldrss.xml
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'

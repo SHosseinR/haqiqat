@@ -1,0 +1,157 @@
+# Haqiqat configuration. Copy to config/config.yaml and edit; config.yaml is git-ignored.
+# Secrets are never written here: each provider names the environment variable that
+# holds its key.
+
+database: data/haqiqat.db
+sources_dir: sources
+lenses_file: config/lenses.yaml
+regions_file: config/regions.yaml
+taxonomy_file: config/taxonomy.yaml
+gazetteer_file: config/gazetteer.yaml
+
+http:
+  user_agent: "HaqiqatBot/0.1 (+https://github.com/SHosseinR/haqiqat)"
+  timeout: 20
+  per_host_delay: 1.0        # seconds between requests to the same host
+  max_items_per_feed: 40
+  fetch_full_text: true      # fetch article pages for main text (robots.txt respected)
+  max_full_text_per_run: 400
+  lookback_hours: 48
+
+# --- Providers -------------------------------------------------------------------------
+# kind: openai_compat  -> any OpenAI-compatible API (OpenAI, Mistral, OpenRouter, DeepSeek,
+#                         Groq, Together, Ollama, vLLM, ...). Chat and embeddings.
+# kind: anthropic      -> native Claude API (needs: pip install 'haqiqat[anthropic]').
+#                         Chat only; Anthropic has no embeddings endpoint.
+# kind: local          -> local sentence-transformers embeddings (pip install 'haqiqat[local]').
+providers:
+  openai:
+    kind: openai_compat
+    base_url: https://api.openai.com/v1
+    api_key_env: OPENAI_API_KEY
+  anthropic:
+    kind: anthropic
+    api_key_env: ANTHROPIC_API_KEY
+    # Server-side refusal fallbacks: if the model declines, the API retries on a
+    # recommended fallback model inside the same call. Remove this line if the model you
+    # choose rejects the parameter.
+    fallbacks: default
+  mistral:
+    kind: openai_compat
+    base_url: https://api.mistral.ai/v1
+    api_key_env: MISTRAL_API_KEY
+  openrouter:
+    kind: openai_compat
+    base_url: https://openrouter.ai/api/v1
+    api_key_env: OPENROUTER_API_KEY
+  ollama:
+    kind: openai_compat
+    base_url: http://localhost:11434/v1
+    json_mode: json_object
+  local:
+    kind: local
+
+# Embeddings through an API by default: a few cents a day, and the server needs no model in
+# RAM. The model must be multilingual; check it with `haqiqat eval-embeddings` and set
+# clustering.join_threshold from the suggested value.
+embeddings:
+  provider: openai
+  model: text-embedding-3-small
+  dimensions: null
+  batch_size: 64
+  max_chars: 2000
+  # Local alternative:  provider: local   model: BAAI/bge-m3
+
+# Which model runs each LLM stage. Mix providers freely, e.g. a cheaper model for updates.
+# `effort` is for Claude models that support it (not Haiku 4.5); omit it for other providers.
+stages:
+  synthesize:
+    provider: anthropic
+    model: claude-opus-5
+    max_output_tokens: 8000
+    effort: medium
+  update:
+    provider: anthropic
+    model: claude-opus-5
+    max_output_tokens: 8000
+    effort: medium
+  # Examples:
+  #   provider: anthropic   model: claude-sonnet-5  (cheaper)   or claude-haiku-4-5 (cheapest)
+  #   provider: openai      model: <an OpenAI chat model>
+  #   provider: mistral     model: mistral-large-latest
+
+# USD per 1M tokens, used for the budget. Check providers' current prices and keep this up
+# to date; models missing here are charged at budget.default_price so they are never "free".
+pricing:
+  claude-opus-5: {input: 5.0, output: 25.0, cache_read: 0.5}
+  claude-sonnet-5: {input: 2.0, output: 10.0, cache_read: 0.2}
+  claude-haiku-4-5: {input: 1.0, output: 5.0, cache_read: 0.1}
+  text-embedding-3-small: {input: 0.02}
+  BAAI/bge-m3: {input: 0.0}
+
+budget:
+  daily_usd: 2.0             # hard cap across all stages; the pipeline degrades gracefully
+  default_price: {input: 5.0, output: 25.0}
+
+clustering:
+  window_hours: 72           # stories stay open for new articles this long
+  join_threshold: 0.62       # tune with `haqiqat eval-embeddings`
+  strong_threshold: 0.75     # join even without a shared place
+  merge_threshold: 0.80
+  storyline_threshold: 0.55
+  storyline_window_days: 30
+  near_duplicate_jaccard: 0.7
+
+lifecycle:
+  min_groups_for_synthesis: 2
+  top_k_candidates: 50
+  fast_track_groups: 3
+  fast_track_hours: 1.0
+  growth_ratio: 1.5
+  novelty_threshold: 0.55
+  top_n_for_short_debounce: 15
+  debounce_hours_top: 2.0
+  debounce_hours_other: 12.0
+  max_versions_per_day: 4
+  max_articles_new: 8
+  max_articles_update: 6
+  lead_chars: 1200
+
+labels:
+  confirmed_min_groups: 3
+  confirmed_min_camps: 2
+  blindspot_min_groups: 4
+  blindspot_share: 0.8
+
+ranking:
+  weights:
+    groups: 1.0
+    lens_diversity: 0.8
+    geo_scope: 0.3
+    velocity: 0.5
+    impact: 0.6
+    confirmation: 0.3
+  half_life_hours: 18
+  velocity_window_hours: 6
+
+telegram:
+  enabled: false
+  bot_token_env: TELEGRAM_BOT_TOKEN
+  channels:
+    en: "@your_english_channel"
+    fa: "@your_persian_channel"
+  min_score: 2.0
+  max_posts_per_day: 12
+  digest_hour_local: 20
+  digest_size: 10
+  timezone: Asia/Tehran
+  edit_window_hours: 48
+
+site:
+  title: {en: Haqiqat, fa: حقیقت}
+  base_url: http://localhost:8000
+  output_dir: build/site
+  languages: [fa, en]
+  stories_per_page: 40
+  source_repo_url: https://github.com/SHosseinR/haqiqat
+  timezone: Asia/Tehran

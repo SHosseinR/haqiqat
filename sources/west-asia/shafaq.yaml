@@ -1,0 +1,23 @@
+id: shafaq
+name:
+  en: Shafaq News
+  fa: شفق نیوز
+homepage: https://shafaq.com
+languages:
+- en
+country: IQ
+type: online
+ownership:
+  kind: private
+independence_group: shafaq
+lenses:
+  origin: arab_other
+reliability:
+  wikipedia_en: unreviewed
+  wikipedia_fa: unreviewed
+focus_regions:
+- west-asia
+feeds:
+- url: https://shafaq.com/en/rss
+  verified: false
+  note: 'Unverified URL: confirm with `haqiqat validate-sources --probe` or find the feed on the site.'
